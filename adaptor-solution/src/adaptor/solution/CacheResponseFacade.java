@@ -1,3 +1,5 @@
+package adaptor.solution;
+
 class CacheResponseFacade implements IResponse {
   private CacheResponse cacheResponse;
 

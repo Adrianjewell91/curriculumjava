@@ -1,3 +1,5 @@
+package adaptor;
+
 class CacheResponse {
   private String a;
   private Details details;

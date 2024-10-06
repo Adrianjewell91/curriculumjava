@@ -1,3 +1,5 @@
+package adaptor;
+
 class Details {
   private String b;
   private String c;

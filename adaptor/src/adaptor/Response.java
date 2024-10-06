@@ -1,3 +1,5 @@
+package adaptor;
+
 class Response {
   private String a;
   private String b;

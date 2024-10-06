@@ -1,3 +1,5 @@
+package adaptor.solution;
+
 class Response implements IResponse {
   private String a;
   private String b;

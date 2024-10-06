@@ -1,3 +1,5 @@
+package adaptor.solution;
+
 class Controller {
   public Controller() { /* TODO document why this constructor is empty */ }
 
