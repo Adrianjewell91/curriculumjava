@@ -1,4 +1,4 @@
-class Response {
+class Response implements IResponse {
   private String a;
   private String b;
   private String c;

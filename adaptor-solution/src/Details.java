@@ -1,16 +1,10 @@
-class Response {
-  private String a;
+class Details {
   private String b;
   private String c;
 
-  public Response(String A, String B, String C) {
-    a = A;
+  public Details(String B, String C) {
     b = B;
     c = C;
-  }
-
-  public String getA() {
-    return a;
   }
 
   public String getB() {
