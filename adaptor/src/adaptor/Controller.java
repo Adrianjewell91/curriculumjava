@@ -1,6 +1,6 @@
 package adaptor;
 
-class Controller {
+public class Controller {
   public Controller() { /* TODO document why this constructor is empty */ }
 
   public Response get(boolean cache) {

@@ -1,6 +1,6 @@
 package adaptor;
 
-class CacheResponse {
+public class CacheResponse {
   private String a;
   private Details details;
 

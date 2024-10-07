@@ -5,7 +5,7 @@ class Controller {
 
   public IResponse get(boolean cache) {
     if (cache) {
-      return new CacheResponseFacade(
+      return new ResponseFacade(
           new CacheResponse("A",
               new Details("B", "C")
           )

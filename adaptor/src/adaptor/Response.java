@@ -1,6 +1,6 @@
 package adaptor;
 
-class Response {
+public class Response {
   private String a;
   private String b;
   private String c;

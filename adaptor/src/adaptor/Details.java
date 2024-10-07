@@ -1,6 +1,6 @@
 package adaptor;
 
-class Details {
+public class Details {
   private String b;
   private String c;
 
