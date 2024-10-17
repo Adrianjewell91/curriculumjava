@@ -29,7 +29,7 @@ Extend an interface without breaking the existing functionality. The tests that 
 
 G. Profiling. (Sm.)
 Large requests at scale are consuming memory and CPU. Debug the system and remove the high CPU and ram consumption.
-1. (The logging of large payloads is the cause of the resource consumption).
+1. (thread leak)
 
 H. SQL Optimization. (Sm.)
 Optimize a complex SQL query. There are multiple business and technical aspects to the query
