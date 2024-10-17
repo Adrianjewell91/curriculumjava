@@ -29,7 +29,7 @@ Extend an interface without breaking the existing functionality. The tests that 
 
 G. Profiling. (Sm.)
 Large requests at scale are consuming memory and CPU. Debug the system and remove the high CPU and ram consumption.
-1. (thread leak)
+
 
 H. SQL Optimization. (Sm.)
 Optimize a complex SQL query. There are multiple business and technical aspects to the query
@@ -40,8 +40,7 @@ Perform an ingress cutover on a high profile microservice. Deployment a secondar
 
 J.  Performance. (Lg.)
 A service is showing errors dropped in the service mesh proxy without traces. Investigate the source of the errors, reproduce the error locally and fix it.
-1. The proxy is an Istio Service mesh proxy.
-2. (the pods are restarting due to the thread exhaustion. High throughput leads to limitless thread creation and no recycling of therads. Limit the thread count. Reproduce locally and set a horizontal scale appropriate to the thread limit.)
+1. The proxy is an Istio Service mesh proxy. (thread leak)
 
 K. Open/Closed Principle. (Med.)
 Add a side effect, such as an event publishing, to a write endpoint such that existing methods don’t have to be opened.
