@@ -100,17 +100,17 @@ W. Mock Processes (Sm.)
 A connector exists that publishes kafka messages to bigquery. Mock a producer using the kafka rest proxy to observe messages show up in GBQ.
 
 X. API migration using Ingress. (Med.)
-A new service should serve the same ingress endpoint. Implement an adaptor and deploy to the same ingress
+A new service should serve the same ingress endpoint. Implement an adaptor and deploy to the same ingress.
 
 Y. Refactor a God Class. (Sm.)
 Divide a large controller into several classes without breaking the functionality. There may not be enough tests so cover all the functionality so make sure to check it out.
 
 Z. Decoupling (Med.)
 Migrate a subset of sql queries to graphql queries. The mapping should occur at the database level.
-(Insert a proxy at the db connection level, ie. sql relay.)
+(Insert a proxy at the db connection level, ie. sql relay and map queries.)
 
 AA. Globals. (Sm.)
-Run an application that has an API client with dependencies on global variables. The application will respond with an error message only tangentially pointing to the cause of the error. (http certs)
+Run an application that has an API client with dependencies on global variables. The application will respond with an error message only tangentially pointing to the cause of the error. (http certs). In this case it was the java cert store missing certs, but in order to add them you have to add them to the right java version's cert store, and then the app has to run in the correct sdk.
 
 BB. Code Reuse. (Sm.)
 Reuse an implementation from another application. The reusability is such that some small modifications are required, such as method signatures, etc. (retry pattern)
@@ -122,4 +122,4 @@ DD. Tests. (Med.)
 Stub all the application dependencies for an integration test. It would include Database, Cache, Secrets, Seed Data.
 
 EE. Configure or Modify. (Sm)
-Configure a schema with an annotation instead of modifying downstream code. (Think schema directives).
+Configure a schema with an annotation instead of modifying downstream code. (Think schema directives gql).
