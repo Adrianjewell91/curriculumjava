@@ -28,7 +28,7 @@ Extend an interface without breaking the existing functionality. The tests that 
 1. The existing endpoint is a POST endpoint. The new functionality must accept extended configurations of the existing request body and be validated, but the original functionality must not break. It will break if the new validations are applied to the original request payload.
 
 G. Profiling. (Sm.)
-Large requests at scale are consuming memory and CPU. Debug the system and remove the high CPU and ram consumption.
+Large requests at scale are consuming memory and CPU. Debug the system and remove the high CPU and ram consumption by managing large payloads.
 
 
 H. SQL Optimization. (Sm.)
