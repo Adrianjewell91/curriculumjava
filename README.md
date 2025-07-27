@@ -87,7 +87,7 @@ Given a monolith graphql endpoint, optimize it for large queries.
 T. Bug Bashing [This could be like 5 projects]. (Lg.)
 Given an integration with an api, debug the errors and fix them.
 1. (I had at least 5 of these for one api, it had to do with not understanding the idiosyncrasies of the language).
-2. Sometimes it was people trying to use database tables in the wrong way.
+2. Sometimes it was people trying to use database tables in the wrong way. This is a really interesting case where "if people can use it in that way, then people will try to use it," highlighting the principle of data modeling according to required limitations instead of required functionality.
 
 U. String Variables. (Sm.)
 Put all logged strings in a single static util file. The repo will be large and there will be a lot of strings.
