@@ -5,20 +5,28 @@ Given a GET endpoint that reads from a database, implement an endpoint that retu
 The new datasource returns data in a different format, but the new endpoint must return data in the same format as the existing endpoint.
 Try to reuse as much code and refactor if possible.
 
-solution: use the adaptor pattern: mapp the new datasource to the old one using an adaptor entity class that accepts a payload from new datasource but the interface getters are according to the old datasource.
+solution: use the adaptor pattern: map the new datasource to the old one using an adaptor entity class that accepts a payload from new datasource but the interface getters are according to the old datasource.
 
 ### B. Domain Decomposition. (Lg.)
 Given a monolithic job processor with many jobs, decompose one of the jobs using the available microservices and event streams.
-The monolithic job processor runs jobs in batches. It uses direct SQL to load batches and write changes. It uses shared entities (multiple jobs use the same entity). Each job loads more data than is required for the job.
-The decomposed job must load data and write changes only through the existing microservices and the existing event streams. It is optional to process data in batches.
+
+The monolithic job processor runs many jobs, and the jobs use batch processing. Each job uses direct SQL to load batches and write changes. It uses shared entities (multiple jobs share the same entity). These entities are massive.
+
+A decomposed job must load data and write changes only through the existing microservices and the existing event streams.
+
+The solution is the grasp the ecosystem of the monolith job runner and the available decoupled ecosystem, then carve out a job and use the decoupled ecosystem to rewrite it. 
 
 ### C. Abstractions. (Med.)
 Given a write flow that accepts data type 1, extend the flow to accept data type 2.
 Under the hood, the write flow transforms data type 1 into two objects, data types 1 and 2. The extended flow should result in the same transformation and continue as usual.
 
+solution: use generic classes to extend functionality without compromising existing functionality.
+
 ### D. Consolidation. (Lg.)
 Given three applications with three redux stores, combine them into a single redux store.
 The three applications exist in the same window under different tabs.
+
+solution: grasp the complexity of three redux stores in three apps and consolidate them into a single redux store. 
 
 ### E. Tech Debt.  (Med.)
 Given an application with considerable tech debt, upgrade a library using hacky methods that navigates around the tech debt.
@@ -31,6 +39,8 @@ Extend an interface without breaking the existing functionality. The tests that 
 
 ### G. Profiling. (Sm.)
 Large requests at scale are consuming memory and CPU. Debug the system and remove the high CPU and ram consumption by managing large payloads.
+
+solution: this is about dealing with edge cases when the read request returns too much data. this happens because graphql can load too much data on the server. one way is for a custom read endpoint for that use case that loads less data.
 
 ### H. SQL Optimization. (Sm.)
 Optimize a complex SQL query. There are multiple business and technical aspects to the query
